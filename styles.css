@@ -1,0 +1,146 @@
+/**** CASCADING STYLE SHEET ****/
+
+/**** Defaults for standard elements ****/
+
+body {
+    background-color: #f3ebdf;
+	font-family: 'Comfortaa', sans-serif;
+	font-size: 12pt;
+	font-weight: 400;
+	color: #4d8504; 
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 80px;
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #222;
+    text-align: center;
+    margin: 0px;
+}
+
+p {
+    text-align: center;
+    margin: .5rem 0px; 
+}
+
+
+/**** IDs for specific elements ****/
+
+#flower {
+    position: relative;
+    height: 150px;
+    margin: 0px 30px 0px 0px;
+}
+
+
+/**** Classes for custom styles ****/
+
+.word {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 108px;
+    margin: 40px 0px;
+}
+
+.letter {
+    height: 108px;
+    margin: 0px 11px;
+}
+
+.letter-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 108px;
+}
+
+.dot {
+    background-color: #222;
+    height: 10px;
+    width: 10px;
+    margin: 1px;
+    border: none;
+    border-radius: 50%; /* variability assigned by JS */
+    animation: rotate; /* assigned by JS */
+}
+
+.blank {
+    background-color: transparent;
+    height: 10px;
+    width: 10px;
+    margin: 1px;
+    border: none;
+}
+
+
+/* ANIMATED GLOW - 8 DIFFERENT COLORS */
+
+@keyframes rotate {
+
+	0% {
+		background-color: #6da129;
+    }
+    
+    10% {
+        background-color: #2ba17e;
+    }
+    
+    20% {
+		background-color: #2c6ba5;
+    }
+    
+    30% {
+		background-color: #2e2caf;
+    }
+    
+    50% {
+		background-color: #772ca3;
+    }
+    
+    60% {
+		background-color: #912ca5;
+    }
+    
+    70% {
+		background-color: #5b2ba8;
+    }
+    
+    80% {
+		background-color: #2c7da3;
+    }
+    
+    90% {
+		background-color: #2b9c80;
+	}
+
+	100% {
+		background-color: #6ea02c;
+	}
+}
+
