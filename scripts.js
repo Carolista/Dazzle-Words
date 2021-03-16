@@ -4,6 +4,13 @@
     Words made of letters made of small shapes with rotating colors
 */
 
+/*
+    TODO: Create module with all letters in key: value format
+    TODO: Add numbers and basic punctuation? Maybe?
+    TODO: Refactor HTML to use JS to display any word or phrase by pulling from module
+    TODO: Create form to get user input for desired word or phrase
+*/
+
 // Event listener for page load
 window.addEventListener("load", function() {
     console.log("Page loaded!");
