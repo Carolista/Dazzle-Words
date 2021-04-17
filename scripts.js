@@ -5,19 +5,16 @@
 */
 
 /*
-    TODO: Create module with all letters in key: value format
-    TODO: Add numbers and basic punctuation? Maybe?
     TODO: Refactor HTML to use JS to display any word or phrase by pulling from module
     TODO: Create form to get user input for desired word or phrase
 */
 
-// Event listener for page load
+import { letters } from './letters.js'; // FIXME: Import from module
+
 window.addEventListener("load", function() {
-    console.log("Page loaded!");
     init();
 });
 
-// DOM code for page elements
 function init() {
 
     // Get some objects from page
@@ -37,7 +34,7 @@ function init() {
                 dots[i].style.borderRadius = "0 50%";
             }
             // Set animation
-            dots[i].style.animation = "rotate " + randomize(7, 2) + "s infinite";
+            dots[i].style.animation = "rotate " + randomize(11, 2) + "s infinite";
         }
     }
 
