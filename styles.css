@@ -4,7 +4,7 @@
 
 body {
     background-color: #121212;
-	font-family: 'Comfortaa', sans-serif;
+	font-family: 'Fredoka One', cursive;
 	font-size: 12pt;
 	font-weight: 400;
 	color: #772ca3; 
@@ -40,7 +40,7 @@ div {
 
 h1 {
     font-size: 3.5rem;
-    color: #222;
+    letter-spacing: 3px;
     text-align: center;
     margin: 0px;
 }
@@ -53,10 +53,42 @@ p {
 
 /**** IDs for specific elements ****/
 
+/* used only in for-mom.html */
 #flower {
     position: relative;
     height: 150px;
     margin: 0px 30px 0px 0px;
+}
+
+#input-area {
+    display: inline-block;
+    position: relative;
+    margin: 30px auto 60px;
+}
+
+#input {
+    font-size: 0.95rem;
+    width: 200px;
+    height: 30px;
+    border-radius: 16px 0px;
+    border: 2px solid #772ca3;
+    padding: 5px 15px;
+}
+
+#input::placeholder {
+    color: #bbb;
+}
+
+#button {
+    color: white;
+    font-size: 1.1rem;
+    background-color:#6ea02c;
+    height: 42px;
+    border-radius: 16px 0px;
+    border: none;
+    padding: 5px 15px;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 

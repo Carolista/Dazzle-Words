@@ -5,8 +5,12 @@
 */
 
 /*
-    TODO: Refactor HTML to use JS to display any word or phrase by pulling from module
+    TODO: Refactor to accept multiple words - split on spaces
     TODO: Create form to get user input for desired word or phrase
+    TODO: Implement form validation to ensure letters and spaces only
+    TODO: Make somewhat responsive - max and min with vw scaling
+    TODO: Add the ability to switch color schemes?
+    TODO: Add the ability to change page background color?
 */
 
 import { letters } from './letters.js'; // FIXME: Import from module
@@ -18,7 +22,50 @@ window.addEventListener("load", function() {
 function init() {
 
     // Get some objects from page
+    let userInput = document.querySelector("#input");
+    let form = document.getElementById("form");
+    let wordArea = document.querySelector("#word-area");
     let dots = document.getElementsByClassName("dot");
+
+    // Form word from imported letters object
+    function buildWord(word) {
+        let result = "";
+        for (let i=0; i < word.length; i++) {
+            result += letters[word[i].toUpperCase()];
+        }
+        return result;
+    }
+
+    function displayAllWords(input) {
+        // Reset display
+        wordArea.innerHTML = "";
+        // Split multiple words out into array
+        let wordArray = input.split(" ");
+        // Loop through and build each word one at a time
+        for (let i=0; i < wordArray.length; i++) {
+            let word = buildWord(wordArray[i]);
+            wordArea.innerHTML += `<div class="word">${word}</div>`;
+        }
+        // Now that all divs with dot class exist on page
+        setDots();
+    }
+
+    function clearForm() {
+        userInput.value = "";
+    }
+
+    // Click events using event delegation
+    form.addEventListener("submit", function(event) {
+        // Validate to ensure alpha only with single spaces separating words
+        let re = /^([a-zA-Z]+\s)*[a-zA-Z]+$/;
+        if (! re.test(userInput.value)) {
+            alert("\nOops! Please enter alphabetical characters and spaces only.")
+        } else { // Display input graphically and reset form
+            displayAllWords(userInput.value);
+            clearForm();
+        }
+        event.preventDefault(); // prevent browser from reloading page
+    });
 
     // Assign shape and animation
     function setDots() {
@@ -37,10 +84,6 @@ function init() {
             dots[i].style.animation = "rotate " + randomize(11, 2) + "s infinite";
         }
     }
-
-    // Initialize board
-    setDots();
-
 
     /** Miscellaneous Helper Functions **/
 
