@@ -5,12 +5,10 @@
 */
 
 /*
-    TODO: Refactor to accept multiple words - split on spaces
-    TODO: Create form to get user input for desired word or phrase
-    TODO: Implement form validation to ensure letters and spaces only
     TODO: Make somewhat responsive - max and min with vw scaling
-    TODO: Add the ability to switch color schemes?
-    TODO: Add the ability to change page background color?
+    TODO: Add ability to handle basic punctuation
+    TODO: Add the ability to switch color schemes
+    TODO: Add the ability to change page background color
 */
 
 import { letters } from './letters.js'; // FIXME: Import from module

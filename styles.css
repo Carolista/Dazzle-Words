@@ -91,14 +91,19 @@ p {
     cursor: pointer;
 }
 
+#word-area {
+    flex-direction: row;
+    flex-wrap: wrap; /* let entire words wrap */
+}
+
 
 /**** Classes for custom styles ****/
 
 .word {
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* keep letters of a single word together */
     height: 108px;
-    margin: 40px 0px;
+    margin: 40px 20px;
 }
 
 .letter {
