@@ -5,8 +5,7 @@
 */
 
 /*
-    TODO: Make somewhat responsive - max and min with vw scaling
-    TODO: Add ability to handle basic punctuation
+    TODO: Add ability to handle basic punctuation and numbers
     TODO: Add the ability to switch color schemes
     TODO: Add the ability to change page background color
 */
