@@ -81,13 +81,13 @@ p {
 
 #button {
     color: white;
-    font-size: 1.1rem;
+    font-weight: bold;
     background-color:#6ea02c;
     height: 42px;
     border-radius: 16px 0px;
     border: none;
     padding: 5px 15px;
-    margin-left: 20px;
+    margin: 10px 20px 0px;
     cursor: pointer;
 }
 
@@ -102,37 +102,41 @@ p {
 .word {
     flex-direction: row;
     flex-wrap: nowrap; /* keep letters of a single word together */
-    height: 108px;
-    margin: 40px 20px;
+    height: auto;
+    margin: 15px 15px;
 }
 
 .letter {
-    height: 108px;
-    margin: 0px 11px;
+    height: auto;
+    width: auto;
+    margin: 0px .7vw;
 }
 
 .letter-row {
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 108px;
-}
+    height: auto;
+ }
 
 .dot {
-    background-color: #222;
-    height: 10px;
-    width: 10px;
-    margin: 1px;
-    border: none;
-    border-radius: 50%; /* variability assigned by JS */
+    background-color: #121212;
     animation: rotate; /* assigned by JS */
 }
 
 .blank {
     background-color: transparent;
-    height: 10px;
-    width: 10px;
+}
+
+.dot, .blank {
+    min-height: 6px;
+    height: .7vw;
+    max-height: 12px;
+    min-width: 6px;
+    width: .7vw;
+    max-width: 12px;
     margin: 1px;
     border: none;
+    border-radius: 50%; /* variability assigned by JS */
 }
 
 
