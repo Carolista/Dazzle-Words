@@ -139,6 +139,12 @@ p {
     border-radius: 50%; /* variability assigned by JS */
 }
 
+@media screen and (min-width: 900px) {
+    .dot, .blank {
+        margin: 2px;
+    }
+}
+
 
 /* ANIMATED GLOW - 8 DIFFERENT COLORS */
 
