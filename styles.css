@@ -1,201 +1,403 @@
-/**** CASCADING STYLE SHEET ****/
-
 /**** Defaults for standard elements ****/
-
 body {
-    background-color: #121212;
-	font-family: 'Fredoka One', cursive;
-	font-size: 12pt;
-	font-weight: 400;
-	color: #772ca3; 
-	width: 100vw;
-	height: 100vh;
-	margin: 0px;
-	padding: 0px;
-    overflow: hidden; 
-    box-sizing: border-box;
+  background-color: #121212;
+  font-family: "Courier Prime", monospace;
+  font-size: 12pt;
+  font-weight: 400;
+  color: #efefef;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: top;
-    width: 100vw;
-    height: auto;
-    padding: 50px 5vw;
-    box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  width: 100vw;
+  height: auto;
+  padding: 50px 5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 div {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1 {
-    font-size: 3.5rem;
-    letter-spacing: 3px;
-    text-align: center;
-    margin: 0px;
+  color: #bb3122;
+  font-size: 3.5rem;
+  font-family: "Fredoka One", sans-serif;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0px;
 }
 
 h3 {
-    color: white;
-    font-size: 2rem;
-    letter-spacing: 2px;
-    text-align: center;
-    margin: 0px;
+  font-family: "Fredoka One", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0px;
 }
 
 p {
-    text-align: center;
-    margin: .5rem 0px; 
+  text-align: center;
+  margin: .5rem 0px;
 }
 
-
 /**** IDs for specific elements ****/
-
 /* used only in for-mom.html */
 #flower {
-    position: relative;
-    height: 150px;
-    margin: 0px 30px 0px 0px;
+  position: relative;
+  height: 150px;
+  margin: 0px 30px 0px 0px;
 }
 
 #input-area {
-    display: inline-block;
-    position: relative;
-    margin: 30px auto 60px;
+  display: inline-block;
+  position: relative;
+  margin: 30px auto 60px;
 }
 
 #input {
-    font-size: 0.95rem;
-    width: 200px;
-    height: 30px;
-    border-radius: 16px 0px;
-    border: 2px solid #772ca3;
-    padding: 5px 15px;
+  font-size: 1.05rem;
+  background-color: #efefef;
+  width: 280px;
+  height: 30px;
+  border-radius: 16px 0px;
+  border: 2px solid #bb3122;
+  padding: 5px 15px;
+}
+
+#input::-webkit-input-placeholder {
+  font-family: "Courier Prime", monospace;
+  color: #cb8c1e;
+}
+
+#input:-ms-input-placeholder {
+  font-family: "Courier Prime", monospace;
+  color: #cb8c1e;
+}
+
+#input::-ms-input-placeholder {
+  font-family: "Courier Prime", monospace;
+  color: #cb8c1e;
 }
 
 #input::placeholder {
-    color: #bbb;
+  font-family: "Courier Prime", monospace;
+  color: #cb8c1e;
 }
 
 #button {
-    color: white;
-    font-weight: bold;
-    background-color:#6ea02c;
-    height: 42px;
-    border-radius: 16px 0px;
-    border: none;
-    padding: 5px 15px;
-    margin: 20px 20px 0px;
-    cursor: pointer;
+  color: #efefef;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #cb8c1e;
+  height: 42px;
+  border-radius: 16px 0px;
+  border: none;
+  padding: 6px 15px 3px;
+  margin: 20px 20px 0px;
+  cursor: pointer;
 }
 
 #word-area {
-    flex-direction: row;
-    flex-wrap: wrap; /* let entire words wrap */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* let entire words wrap */
 }
 
-
 /**** Classes for custom styles ****/
-
 .word {
-    flex-direction: row;
-    flex-wrap: nowrap; /* keep letters of a single word together */
-    height: auto;
-    margin: 15px 15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  /* keep letters of a single word together */
+  height: auto;
+  margin: 15px 15px;
 }
 
 .letter {
-    height: auto;
-    width: auto;
-    margin: 0px .8vw;
+  height: auto;
+  width: auto;
+  margin: 0px .8vw;
 }
 
 .letter-row {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: auto;
- }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: auto;
+}
 
 .dot {
-    background-color: #121212;
-    animation: rotate; /* assigned by JS */
+  background-color: #121212;
+  -webkit-animation: rotateB;
+          animation: rotateB;
+  /* assigned by JS */
 }
 
 .blank {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .dot, .blank {
-    min-height: 5px;
-    height: 1vw;
-    max-height: 12px;
-    min-width: 5px;
-    width: 1vw;
-    max-width: 12px;
-    margin: 1px;
-    border: none;
-    border-radius: 50%; /* variability assigned by JS */
+  min-height: 5px;
+  height: 1vw;
+  max-height: 12px;
+  min-width: 5px;
+  width: 1vw;
+  max-width: 12px;
+  margin: 1px;
+  border: none;
+  border-radius: 50%;
+  /* variability assigned by JS */
 }
 
 @media screen and (min-width: 900px) {
-    .dot, .blank {
-        margin: 2px;
-    }
+  .dot, .blank {
+    margin: 2px;
+  }
 }
 
-
-/* ANIMATED GLOW - 8 DIFFERENT COLORS */
-
-@keyframes rotate {
-
-	0% {
-		background-color: #6da129;
-    }
-    
-    10% {
-        background-color: #2ba17e;
-    }
-    
-    20% {
-		background-color: #2c6ba5;
-    }
-    
-    30% {
-		background-color: #2e2caf;
-    }
-    
-    50% {
-		background-color: #772ca3;
-    }
-    
-    60% {
-		background-color: #912ca5;
-    }
-    
-    70% {
-		background-color: #5b2ba8;
-    }
-    
-    80% {
-		background-color: #2c7da3;
-    }
-    
-    90% {
-		background-color: #2b9c80;
-	}
-
-	100% {
-		background-color: #6ea02c;
-	}
+/* COLOR ROTATIONS */
+@-webkit-keyframes rotateA {
+  0% {
+    background-color: #6da129;
+  }
+  10% {
+    background-color: #2ba17e;
+  }
+  20% {
+    background-color: #2c6ba5;
+  }
+  30% {
+    background-color: #2e2caf;
+  }
+  50% {
+    background-color: #772ca3;
+  }
+  60% {
+    background-color: #912ca5;
+  }
+  70% {
+    background-color: #5b2ba8;
+  }
+  80% {
+    background-color: #2c7da3;
+  }
+  90% {
+    background-color: #2b9c80;
+  }
+  100% {
+    background-color: #6ea02c;
+  }
+}
+@keyframes rotateA {
+  0% {
+    background-color: #6da129;
+  }
+  10% {
+    background-color: #2ba17e;
+  }
+  20% {
+    background-color: #2c6ba5;
+  }
+  30% {
+    background-color: #2e2caf;
+  }
+  50% {
+    background-color: #772ca3;
+  }
+  60% {
+    background-color: #912ca5;
+  }
+  70% {
+    background-color: #5b2ba8;
+  }
+  80% {
+    background-color: #2c7da3;
+  }
+  90% {
+    background-color: #2b9c80;
+  }
+  100% {
+    background-color: #6ea02c;
+  }
 }
 
+@-webkit-keyframes rotateB {
+  0% {
+    background-color: #cb8c1e;
+  }
+  10% {
+    background-color: #d3b719;
+  }
+  20% {
+    background-color: #cb9218;
+  }
+  30% {
+    background-color: #af552c;
+  }
+  50% {
+    background-color: #bb3122;
+  }
+  60% {
+    background-color: #b52255;
+  }
+  70% {
+    background-color: #b81da6;
+  }
+  80% {
+    background-color: #b81f4f;
+  }
+  90% {
+    background-color: #ba341c;
+  }
+  100% {
+    background-color: #bd4816;
+  }
+}
+
+@keyframes rotateB {
+  0% {
+    background-color: #cb8c1e;
+  }
+  10% {
+    background-color: #d3b719;
+  }
+  20% {
+    background-color: #cb9218;
+  }
+  30% {
+    background-color: #af552c;
+  }
+  50% {
+    background-color: #bb3122;
+  }
+  60% {
+    background-color: #b52255;
+  }
+  70% {
+    background-color: #b81da6;
+  }
+  80% {
+    background-color: #b81f4f;
+  }
+  90% {
+    background-color: #ba341c;
+  }
+  100% {
+    background-color: #bd4816;
+  }
+}
+
+@-webkit-keyframes rotateC {
+  0% {
+    background-color: #3cbd18;
+  }
+  10% {
+    background-color: #2ba17e;
+  }
+  20% {
+    background-color: #22a1c7;
+  }
+  30% {
+    background-color: #1942c9;
+  }
+  50% {
+    background-color: #1b43c7;
+  }
+  60% {
+    background-color: #1584c9;
+  }
+  70% {
+    background-color: #0ebaa0;
+  }
+  80% {
+    background-color: #1ac73d;
+  }
+  90% {
+    background-color: #8ec918;
+  }
+  100% {
+    background-color: #c5c51d;
+  }
+}
+
+@keyframes rotateC {
+  0% {
+    background-color: #3cbd18;
+  }
+  10% {
+    background-color: #2ba17e;
+  }
+  20% {
+    background-color: #22a1c7;
+  }
+  30% {
+    background-color: #1942c9;
+  }
+  50% {
+    background-color: #1b43c7;
+  }
+  60% {
+    background-color: #1584c9;
+  }
+  70% {
+    background-color: #0ebaa0;
+  }
+  80% {
+    background-color: #1ac73d;
+  }
+  90% {
+    background-color: #8ec918;
+  }
+  100% {
+    background-color: #c5c51d;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

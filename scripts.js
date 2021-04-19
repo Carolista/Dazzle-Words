@@ -110,7 +110,7 @@ function init() {
                 dots[i].style.borderRadius = "0 50%";
             }
             // Set animation
-            dots[i].style.animation = "rotate " + randomize(11, 2) + "s infinite";
+            dots[i].style.animation = "rotateB " + randomize(11, 2) + "s infinite";
         }
     }
 

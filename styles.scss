@@ -1,0 +1,333 @@
+// GENERAL
+$default-dark: #121212;
+$default-light: #efefef;
+$default-font: 'Courier Prime', monospace;
+$title-font: 'Fredoka One', sans-serif;
+
+// COLOR SCHEME A
+$background-color-A01: #6da129;
+$background-color-A02: #2ba17e;
+$background-color-A03: #2c6ba5;
+$background-color-A04: #2e2caf;
+$background-color-A05: #772ca3;
+$background-color-A06: #912ca5;
+$background-color-A07: #5b2ba8;
+$background-color-A08: #2c7da3;
+$background-color-A09: #2b9c80;
+$background-color-A10: #6ea02c;
+
+// COLOR SCHEME B
+$background-color-B01: #cb8c1e;
+$background-color-B02: #d3b719;
+$background-color-B03: #cb9218;
+$background-color-B04: #af552c;
+$background-color-B05: #bb3122;
+$background-color-B06: #b52255;
+$background-color-B07: #b81da6;
+$background-color-B08: #b81f4f;
+$background-color-B09: #ba341c;
+$background-color-B10: #bd4816;
+
+// COLOR SCHEME C
+$background-color-C01: #3cbd18;
+$background-color-C02: #2ba17e;
+$background-color-C03: #22a1c7;
+$background-color-C04: #1942c9;
+$background-color-C05: #1b43c7;
+$background-color-C06: #1584c9;
+$background-color-C07: #0ebaa0;
+$background-color-C08: #1ac73d;
+$background-color-C09: #8ec918;
+$background-color-C10: #c5c51d;
+
+
+/**** Defaults for standard elements ****/
+
+body {
+    background-color: $default-dark;
+	font-family: $default-font;
+	font-size: 12pt;
+	font-weight: 400;
+	color: $default-light;
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    width: 100vw;
+    height: auto;
+    padding: 50px 5vw;
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: $background-color-B05; 
+    font-size: 3.5rem;
+    font-family: $title-font;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0px;
+}
+
+h3 {
+    font-family: $title-font;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0px;
+}
+
+p {
+    text-align: center;
+    margin: .5rem 0px; 
+}
+
+
+/**** IDs for specific elements ****/
+
+/* used only in for-mom.html */
+#flower {
+    position: relative;
+    height: 150px;
+    margin: 0px 30px 0px 0px;
+}
+
+#input-area {
+    display: inline-block;
+    position: relative;
+    margin: 30px auto 60px;
+}
+
+#input {
+    font-size: 1.05rem;
+    background-color: $default-light;
+    width: 280px;
+    height: 30px;
+    border-radius: 16px 0px;
+    border: 2px solid $background-color-B05;
+    padding: 5px 15px;
+}
+
+#input::placeholder {
+    font-family: $default-font;
+    color: $background-color-B01;
+}
+
+#button {
+    color: $default-light;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: $background-color-B01;
+    height: 42px;
+    border-radius: 16px 0px;
+    border: none;
+    padding: 6px 15px 3px;
+    margin: 20px 20px 0px;
+    cursor: pointer;
+}
+
+#word-area {
+    flex-direction: row;
+    flex-wrap: wrap; /* let entire words wrap */
+}
+
+
+/**** Classes for custom styles ****/
+
+.word {
+    flex-direction: row;
+    flex-wrap: nowrap; /* keep letters of a single word together */
+    height: auto;
+    margin: 15px 15px;
+}
+
+.letter {
+    height: auto;
+    width: auto;
+    margin: 0px .8vw;
+}
+
+.letter-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+ }
+
+.dot {
+    background-color: $default-dark;
+    animation: rotateB; /* assigned by JS */
+}
+
+.blank {
+    background-color: transparent;
+}
+
+.dot, .blank {
+    min-height: 5px;
+    height: 1vw;
+    max-height: 12px;
+    min-width: 5px;
+    width: 1vw;
+    max-width: 12px;
+    margin: 1px;
+    border: none;
+    border-radius: 50%; /* variability assigned by JS */
+}
+
+@media screen and (min-width: 900px) {
+    .dot, .blank {
+        margin: 2px;
+    }
+}
+
+
+/* COLOR ROTATIONS */
+
+@keyframes rotateA {
+
+	0% {
+		background-color: $background-color-A01;
+    }
+    
+    10% {
+        background-color: $background-color-A02;
+    }
+    
+    20% {
+		background-color: $background-color-A03;
+    }
+    
+    30% {
+		background-color: $background-color-A04;
+    }
+    
+    50% {
+		background-color: $background-color-A05;
+    }
+    
+    60% {
+		background-color: $background-color-A06;
+    }
+    
+    70% {
+		background-color: $background-color-A07;
+    }
+    
+    80% {
+		background-color: $background-color-A08;
+    }
+    
+    90% {
+		background-color: $background-color-A09;
+	}
+
+	100% {
+		background-color: $background-color-A10;
+	}
+}
+
+@keyframes rotateB {
+
+	0% {
+		background-color: $background-color-B01;
+    }
+    
+    10% {
+        background-color: $background-color-B02;
+    }
+    
+    20% {
+		background-color: $background-color-B03;
+    }
+    
+    30% {
+		background-color: $background-color-B04;
+    }
+    
+    50% {
+		background-color: $background-color-B05;
+    }
+    
+    60% {
+		background-color: $background-color-B06;
+    }
+    
+    70% {
+		background-color: $background-color-B07;
+    }
+    
+    80% {
+		background-color: $background-color-B08;
+    }
+    
+    90% {
+		background-color: $background-color-B09;
+	}
+
+	100% {
+		background-color: $background-color-B10;
+	}
+}
+
+@keyframes rotateC {
+
+	0% {
+		background-color: $background-color-C01;
+    }
+    
+    10% {
+        background-color: $background-color-C02;
+    }
+    
+    20% {
+		background-color: $background-color-C03;
+    }
+    
+    30% {
+		background-color: $background-color-C04;
+    }
+    
+    50% {
+		background-color: $background-color-C05;
+    }
+    
+    60% {
+		background-color: $background-color-C06;
+    }
+    
+    70% {
+		background-color: $background-color-C07;
+    }
+    
+    80% {
+		background-color: $background-color-C08;
+    }
+    
+    90% {
+		background-color: $background-color-C09;
+	}
+
+	100% {
+		background-color: $background-color-C10;
+	}
+}
