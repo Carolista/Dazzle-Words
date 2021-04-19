@@ -28,14 +28,14 @@ const schemeA = {
 }
 const schemeB = {
     name: "rotateB",
-    color01: "#cb8c1e",
-    color02: "#d3b719",
+    color01: "#cb771e",
+    color02: "#d3a719",
     color03: "#cb9218",
     color04: "#af552c",
     color05: "#bb3122",
-    color06: "#b52255",
-    color07: "#b81da6",
-    color08: "#b81f4f",
+    color06: "#bb2a6e",
+    color07: "#ab1db8",
+    color08: "#b81f6e",
     color09: "#ba341c",
     color10: "#bd4816"
 }
@@ -67,6 +67,7 @@ function init() {
     const button = document.querySelector("#button");
     const wordArea = document.querySelector("#word-area");
     const dots = document.getElementsByClassName("dot");
+    const icons = document.getElementsByClassName("icons");
 
     // Variable color schemes
     const colorSchemes = [schemeA, schemeB, schemeC];
@@ -87,6 +88,19 @@ function init() {
             }
         }  
     }
+
+    // Change color scheme when one of the color scheme icons is clicked 
+    document.addEventListener("click", function(event) {
+        console.log("icon clicked");
+        for (let i=0; i < colorSchemes.length; i++) {
+            if (event.target.id === colorSchemes[i].name) {
+                console.log("match!")
+                currentSchemeIndex = i;
+                console.log("new index is " + currentSchemeIndex);
+                updateColors();
+            }
+        }
+    });
 
     // Find special character and get key name
     function getKeyByValue(value) {

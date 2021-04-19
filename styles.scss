@@ -18,14 +18,14 @@ $A09: #2b9c80;
 $A10: #6ea02c;
 
 // COLOR SCHEME B
-$B01: #cb8c1e;
-$B02: #d3b719;
+$B01: #cb771e;
+$B02: #d3a719;
 $B03: #cb9218;
 $B04: #af552c;
 $B05: #bb3122;
-$B06: #b52255;
-$B07: #b81da6;
-$B08: #b81f4f;
+$B06: #bb2a6e;
+$B07: #ab1db8;
+$B08: #b81f6e;
 $B09: #ba341c;
 $B10: #bd4816;
 
@@ -98,7 +98,7 @@ h3 {
     font-size: 1.7rem;
     letter-spacing: 2px;
     text-align: center;
-    margin: 0px;
+    margin: 0px 0px 15px;
 }
 
 p {
@@ -169,6 +169,23 @@ p {
     margin: 60px 0px;
 }
 
+#options-icons {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#rotateA {
+    animation: rotateA 4s infinite;
+}
+
+#rotateB {
+    animation: rotateB 4s infinite;
+}
+
+#rotateC {
+    animation: rotateC 4s infinite;
+}
+
 
 /**** Classes for custom styles ****/
 
@@ -216,6 +233,15 @@ p {
     .dot, .blank {
         margin: 2px;
     }
+}
+
+.color-scheme-icon {
+    background-color: $default-dark;
+    height: 30px;
+    width: 30px;
+    border-radius: 50% 0px;
+    margin: 0px 5px;
+    cursor: pointer;
 }
 
 

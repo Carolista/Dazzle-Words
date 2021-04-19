@@ -72,7 +72,7 @@ h3 {
   font-size: 1.7rem;
   letter-spacing: 2px;
   text-align: center;
-  margin: 0px;
+  margin: 0px 0px 15px;
 }
 
 p {
@@ -130,7 +130,7 @@ p {
   font-family: inherit;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: #cb8c1e;
+  background-color: #cb771e;
   height: 42px;
   border-radius: 16px 0px;
   border: none;
@@ -163,6 +163,30 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 60px 0px;
+}
+
+#options-icons {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+#rotateA {
+  -webkit-animation: rotateA 4s infinite;
+          animation: rotateA 4s infinite;
+}
+
+#rotateB {
+  -webkit-animation: rotateB 4s infinite;
+          animation: rotateB 4s infinite;
+}
+
+#rotateC {
+  -webkit-animation: rotateC 4s infinite;
+          animation: rotateC 4s infinite;
 }
 
 /**** Classes for custom styles ****/
@@ -222,6 +246,15 @@ p {
   .dot, .blank {
     margin: 2px;
   }
+}
+
+.color-scheme-icon {
+  background-color: #121212;
+  height: 30px;
+  width: 30px;
+  border-radius: 50% 0px;
+  margin: 0px 5px;
+  cursor: pointer;
 }
 
 /* COLOR ROTATIONS */
@@ -292,10 +325,10 @@ p {
 
 @-webkit-keyframes rotateB {
   0% {
-    background-color: #cb8c1e;
+    background-color: #cb771e;
   }
   10% {
-    background-color: #d3b719;
+    background-color: #d3a719;
   }
   20% {
     background-color: #cb9218;
@@ -307,13 +340,13 @@ p {
     background-color: #bb3122;
   }
   60% {
-    background-color: #b52255;
+    background-color: #bb2a6e;
   }
   70% {
-    background-color: #b81da6;
+    background-color: #ab1db8;
   }
   80% {
-    background-color: #b81f4f;
+    background-color: #b81f6e;
   }
   90% {
     background-color: #ba341c;
@@ -325,10 +358,10 @@ p {
 
 @keyframes rotateB {
   0% {
-    background-color: #cb8c1e;
+    background-color: #cb771e;
   }
   10% {
-    background-color: #d3b719;
+    background-color: #d3a719;
   }
   20% {
     background-color: #cb9218;
@@ -340,13 +373,13 @@ p {
     background-color: #bb3122;
   }
   60% {
-    background-color: #b52255;
+    background-color: #bb2a6e;
   }
   70% {
-    background-color: #b81da6;
+    background-color: #ab1db8;
   }
   80% {
-    background-color: #b81f4f;
+    background-color: #b81f6e;
   }
   90% {
     background-color: #ba341c;
