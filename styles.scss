@@ -1,44 +1,45 @@
 // GENERAL
 $default-dark: #121212;
 $default-light: #efefef;
+$default-watermark: #aaa;
 $default-font: 'Courier Prime', monospace;
 $title-font: 'Fredoka One', sans-serif;
 
 // COLOR SCHEME A
-$background-color-A01: #6da129;
-$background-color-A02: #2ba17e;
-$background-color-A03: #2c6ba5;
-$background-color-A04: #2e2caf;
-$background-color-A05: #772ca3;
-$background-color-A06: #912ca5;
-$background-color-A07: #5b2ba8;
-$background-color-A08: #2c7da3;
-$background-color-A09: #2b9c80;
-$background-color-A10: #6ea02c;
+$A01: #6da129;
+$A02: #2ba17e;
+$A03: #2c6ba5;
+$A04: #2e2caf;
+$A05: #772ca3;
+$A06: #912ca5;
+$A07: #5b2ba8;
+$A08: #2c7da3;
+$A09: #2b9c80;
+$A10: #6ea02c;
 
 // COLOR SCHEME B
-$background-color-B01: #cb8c1e;
-$background-color-B02: #d3b719;
-$background-color-B03: #cb9218;
-$background-color-B04: #af552c;
-$background-color-B05: #bb3122;
-$background-color-B06: #b52255;
-$background-color-B07: #b81da6;
-$background-color-B08: #b81f4f;
-$background-color-B09: #ba341c;
-$background-color-B10: #bd4816;
+$B01: #cb8c1e;
+$B02: #d3b719;
+$B03: #cb9218;
+$B04: #af552c;
+$B05: #bb3122;
+$B06: #b52255;
+$B07: #b81da6;
+$B08: #b81f4f;
+$B09: #ba341c;
+$B10: #bd4816;
 
 // COLOR SCHEME C
-$background-color-C01: #3cbd18;
-$background-color-C02: #2ba17e;
-$background-color-C03: #22a1c7;
-$background-color-C04: #1942c9;
-$background-color-C05: #1b43c7;
-$background-color-C06: #1584c9;
-$background-color-C07: #0ebaa0;
-$background-color-C08: #1ac73d;
-$background-color-C09: #8ec918;
-$background-color-C10: #c5c51d;
+$C01: #7fa411;
+$C02: #3a8e10;
+$C03: #2ba17e;
+$C04: #22a0c7;
+$C05: #0f85ce;
+$C06: #15bdc9;
+$C07: #0ebaa0;
+$C08: #1ac73d;
+$C09: #8ec918;
+$C10: #c5c51d;
 
 
 /**** Defaults for standard elements ****/
@@ -80,7 +81,7 @@ div {
 }
 
 h1 {
-    color: $background-color-B05; 
+    color: $B05; 
     font-size: 3.5rem;
     font-family: $title-font;
     letter-spacing: 3px;
@@ -114,7 +115,7 @@ p {
 #input-area {
     display: inline-block;
     position: relative;
-    margin: 30px auto 60px;
+    margin: 20px auto 60px;
 }
 
 #input {
@@ -123,13 +124,13 @@ p {
     width: 280px;
     height: 30px;
     border-radius: 16px 0px;
-    border: 2px solid $background-color-B05;
+    border: 2px solid $B05;
     padding: 5px 15px;
 }
 
 #input::placeholder {
     font-family: $default-font;
-    color: $background-color-B01;
+    color: $default-watermark;
 }
 
 #button {
@@ -137,13 +138,19 @@ p {
     font-family: inherit;
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: $background-color-B01;
+    background-color: $B01;
     height: 42px;
     border-radius: 16px 0px;
     border: none;
     padding: 6px 15px 3px;
-    margin: 20px 20px 0px;
+    margin: 20px;
     cursor: pointer;
+}
+
+@media screen and (min-width: 540px) {
+    #button {
+        margin: 0px 20px;
+    }
 }
 
 #word-area {
@@ -206,128 +213,128 @@ p {
 @keyframes rotateA {
 
 	0% {
-		background-color: $background-color-A01;
+		background-color: $A01;
     }
     
     10% {
-        background-color: $background-color-A02;
+        background-color: $A02;
     }
     
     20% {
-		background-color: $background-color-A03;
+		background-color: $A03;
     }
     
     30% {
-		background-color: $background-color-A04;
+		background-color: $A04;
     }
     
     50% {
-		background-color: $background-color-A05;
+		background-color: $A05;
     }
     
     60% {
-		background-color: $background-color-A06;
+		background-color: $A06;
     }
     
     70% {
-		background-color: $background-color-A07;
+		background-color: $A07;
     }
     
     80% {
-		background-color: $background-color-A08;
+		background-color: $A08;
     }
     
     90% {
-		background-color: $background-color-A09;
+		background-color: $A09;
 	}
 
 	100% {
-		background-color: $background-color-A10;
+		background-color: $A10;
 	}
 }
 
 @keyframes rotateB {
 
 	0% {
-		background-color: $background-color-B01;
+		background-color: $B01;
     }
     
     10% {
-        background-color: $background-color-B02;
+        background-color: $B02;
     }
     
     20% {
-		background-color: $background-color-B03;
+		background-color: $B03;
     }
     
     30% {
-		background-color: $background-color-B04;
+		background-color: $B04;
     }
     
     50% {
-		background-color: $background-color-B05;
+		background-color: $B05;
     }
     
     60% {
-		background-color: $background-color-B06;
+		background-color: $B06;
     }
     
     70% {
-		background-color: $background-color-B07;
+		background-color: $B07;
     }
     
     80% {
-		background-color: $background-color-B08;
+		background-color: $B08;
     }
     
     90% {
-		background-color: $background-color-B09;
+		background-color: $B09;
 	}
 
 	100% {
-		background-color: $background-color-B10;
+		background-color: $B10;
 	}
 }
 
 @keyframes rotateC {
 
 	0% {
-		background-color: $background-color-C01;
+		background-color: $C01;
     }
     
     10% {
-        background-color: $background-color-C02;
+        background-color: $C02;
     }
     
     20% {
-		background-color: $background-color-C03;
+		background-color: $C03;
     }
     
     30% {
-		background-color: $background-color-C04;
+		background-color: $C04;
     }
     
     50% {
-		background-color: $background-color-C05;
+		background-color: $C05;
     }
     
     60% {
-		background-color: $background-color-C06;
+		background-color: $C06;
     }
     
     70% {
-		background-color: $background-color-C07;
+		background-color: $C07;
     }
     
     80% {
-		background-color: $background-color-C08;
+		background-color: $C08;
     }
     
     90% {
-		background-color: $background-color-C09;
+		background-color: $C09;
 	}
 
 	100% {
-		background-color: $background-color-C10;
+		background-color: $C10;
 	}
 }

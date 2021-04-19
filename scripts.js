@@ -5,12 +5,53 @@
 */
 
 /*
-    TODO: Add ability to handle basic punctuation and numbers
     TODO: Add the ability to switch color schemes
     TODO: Add the ability to change page background color
 */
 
 import { chars, specials } from './chars.js';
+// Note: this file and chars.js are both specified as modules in HTML head
+
+// COLOR SCHEMES - For setting title, button, etc.; need to keep consistent with SCSS variables
+const schemeA = {
+    name: "rotateA",
+    color01: "#6da129",
+    color02: "#2ba17e",
+    color03: "#2c6ba5",
+    color04: "#2e2caf",
+    color05: "#772ca3",
+    color06: "#912ca5",
+    color07: "#5b2ba8",
+    color08: "#2c7da3",
+    color09: "#2b9c80",
+    color10: "#6ea02c"
+}
+const schemeB = {
+    name: "rotateB",
+    color01: "#cb8c1e",
+    color02: "#d3b719",
+    color03: "#cb9218",
+    color04: "#af552c",
+    color05: "#bb3122",
+    color06: "#b52255",
+    color07: "#b81da6",
+    color08: "#b81f4f",
+    color09: "#ba341c",
+    color10: "#bd4816"
+}
+const schemeC = {
+    name: "rotateC",
+    color01: "#7fa411",
+    color02: "#3a8e10",
+    color03: "#2ba17e",
+    color04: "#22a0c7",
+    color05: "#0f85ce",
+    color06: "#15bdc9",
+    color07: "#0ebaa0",
+    color08: "#1ac73d",
+    color09: "#8ec918",
+    color10: "#c5c51d"
+}
 
 window.addEventListener("load", function() {
     init();
@@ -19,10 +60,32 @@ window.addEventListener("load", function() {
 function init() {
 
     // Get some objects from page
-    let userInput = document.querySelector("#input");
-    let form = document.getElementById("form");
-    let wordArea = document.querySelector("#word-area");
-    let dots = document.getElementsByClassName("dot");
+    const title = document.querySelector("#title");
+    const form = document.querySelector("#form");
+    const inputField = document.querySelector("#input");
+    const button = document.querySelector("#button");
+    const wordArea = document.querySelector("#word-area");
+    const dots = document.getElementsByClassName("dot");
+
+    // Variable color schemes
+    const colorSchemes = [schemeA, schemeB, schemeC];
+
+    // Initial values upon first loading
+    let currentSchemeIndex = randomize(3);
+    updateColors();
+
+    // Update all objects affected by color scheme change
+    function updateColors() {
+        title.style.color = colorSchemes[currentSchemeIndex].color05;
+        inputField.style.borderColor = colorSchemes[currentSchemeIndex].color05;
+        button.style.backgroundColor = colorSchemes[currentSchemeIndex].color01;
+        // Update animation for each dot if currently displaying content
+        if (wordArea.innerHTML !== "") {
+            for (let i=0; i < dots.length; i++) {
+                dots[i].style.animation = `${colorSchemes[currentSchemeIndex].name} ${randomize(11, 2)}s infinite`;
+            }
+        }  
+    }
 
     // Find special character and get key name
     function getKeyByValue(value) {
@@ -40,7 +103,6 @@ function init() {
             } else {
                 result += chars[currentChar.toUpperCase()];
             }
-            
         }
         return result;
     }
@@ -75,22 +137,22 @@ function init() {
 
     // Reset input field(s) without reloading page
     function clearForm() {
-        userInput.value = "";
+        inputField.value = "";
     }
 
     // Click events using event delegation
     form.addEventListener("submit", function(event) {
         // Validate to ensure alphanumeric, space, or certain special characters
         let re = /^[a-zA-Z0-9\-.,:;'"?!@#$%&()+=\s]+$/;
-        if (userInput.value === "") {
+        if (inputField.value === "") {
             alert("\nOops! Your input was blank.");
-        } else if (! re.test(userInput.value)) {
+        } else if (! re.test(inputField.value)) {
             alert("\nOops! One or more of your characters can't be bedazzled. Try again!");
         } else { // Display input graphically and reset form
-            if (hasLongWord(userInput.value)) {
+            if (hasLongWord(inputField.value)) {
                 alert("\nFor best results, each word should be no longer than 7-8 characters. Thank you! \n- Your Friendly Local Quality Assurance Specialist");
             }
-            displayAllWords(userInput.value);
+            displayAllWords(inputField.value);
             clearForm();
         }
         event.preventDefault(); // prevent browser from reloading page
@@ -110,7 +172,7 @@ function init() {
                 dots[i].style.borderRadius = "0 50%";
             }
             // Set animation
-            dots[i].style.animation = "rotateB " + randomize(11, 2) + "s infinite";
+            dots[i].style.animation = `${colorSchemes[currentSchemeIndex].name} ${randomize(11, 2)}s infinite`;
         }
     }
 

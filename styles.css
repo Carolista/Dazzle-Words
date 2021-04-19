@@ -87,7 +87,7 @@ p {
 #input-area {
   display: inline-block;
   position: relative;
-  margin: 30px auto 60px;
+  margin: 20px auto 60px;
 }
 
 #input {
@@ -102,22 +102,22 @@ p {
 
 #input::-webkit-input-placeholder {
   font-family: "Courier Prime", monospace;
-  color: #cb8c1e;
+  color: #aaa;
 }
 
 #input:-ms-input-placeholder {
   font-family: "Courier Prime", monospace;
-  color: #cb8c1e;
+  color: #aaa;
 }
 
 #input::-ms-input-placeholder {
   font-family: "Courier Prime", monospace;
-  color: #cb8c1e;
+  color: #aaa;
 }
 
 #input::placeholder {
   font-family: "Courier Prime", monospace;
-  color: #cb8c1e;
+  color: #aaa;
 }
 
 #button {
@@ -130,8 +130,14 @@ p {
   border-radius: 16px 0px;
   border: none;
   padding: 6px 15px 3px;
-  margin: 20px 20px 0px;
+  margin: 20px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 540px) {
+  #button {
+    margin: 0px 20px;
+  }
 }
 
 #word-area {
@@ -337,22 +343,22 @@ p {
 
 @-webkit-keyframes rotateC {
   0% {
-    background-color: #3cbd18;
+    background-color: #7fa411;
   }
   10% {
-    background-color: #2ba17e;
+    background-color: #3a8e10;
   }
   20% {
-    background-color: #22a1c7;
+    background-color: #2ba17e;
   }
   30% {
-    background-color: #1942c9;
+    background-color: #22a0c7;
   }
   50% {
-    background-color: #1b43c7;
+    background-color: #0f85ce;
   }
   60% {
-    background-color: #1584c9;
+    background-color: #15bdc9;
   }
   70% {
     background-color: #0ebaa0;
@@ -370,22 +376,22 @@ p {
 
 @keyframes rotateC {
   0% {
-    background-color: #3cbd18;
+    background-color: #7fa411;
   }
   10% {
-    background-color: #2ba17e;
+    background-color: #3a8e10;
   }
   20% {
-    background-color: #22a1c7;
+    background-color: #2ba17e;
   }
   30% {
-    background-color: #1942c9;
+    background-color: #22a0c7;
   }
   50% {
-    background-color: #1b43c7;
+    background-color: #0f85ce;
   }
   60% {
-    background-color: #1584c9;
+    background-color: #15bdc9;
   }
   70% {
     background-color: #0ebaa0;
