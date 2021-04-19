@@ -45,6 +45,14 @@ h1 {
     margin: 0px;
 }
 
+h3 {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0px;
+}
+
 p {
     text-align: center;
     margin: .5rem 0px; 
@@ -109,7 +117,7 @@ p {
 .letter {
     height: auto;
     width: auto;
-    margin: 0px .7vw;
+    margin: 0px .8vw;
 }
 
 .letter-row {
@@ -128,11 +136,11 @@ p {
 }
 
 .dot, .blank {
-    min-height: 6px;
-    height: .9vw;
+    min-height: 5px;
+    height: 1vw;
     max-height: 12px;
-    min-width: 6px;
-    width: .9vw;
+    min-width: 5px;
+    width: 1vw;
     max-width: 12px;
     margin: 1px;
     border: none;

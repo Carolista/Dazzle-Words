@@ -1,3 +1,5 @@
+// ALPHABET
+
 const letterA = `
 <div class="letter">
     <div class="letter-row">
@@ -930,6 +932,7 @@ const letterO = `
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
+        <div class="dot"></div>
         <div class="blank"></div>
         <div class="blank"></div>
     </div>
@@ -937,23 +940,6 @@ const letterO = `
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="blank"></div>
-        <div class="blank"></div>
-        <div class="blank"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-    <div class="letter-row">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="blank"></div>
-        <div class="blank"></div>
-        <div class="blank"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-    <div class="letter-row">
-        <div class="dot"></div>
-        <div class="dot"></div>
         <div class="blank"></div>
         <div class="blank"></div>
         <div class="blank"></div>
@@ -966,6 +952,17 @@ const letterO = `
         <div class="blank"></div>
         <div class="blank"></div>
         <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
@@ -975,12 +972,24 @@ const letterO = `
         <div class="blank"></div>
         <div class="blank"></div>
         <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
         <div class="dot"></div>
         <div class="dot"></div>
     </div>
     <div class="letter-row">
         <div class="blank"></div>
         <div class="blank"></div>
+        <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
@@ -1795,8 +1804,1582 @@ const letterZ = `
 `;
 
 
+// NUMBERS
+
+const number0 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const number1 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+`;
+
+const number2 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+`;
+
+const number3 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const number4 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const number5 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const number6 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const number7 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const number8 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const number9 = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+
+// SPECIAL CHARACTERS
+
+const dash = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const period = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+`;
+
+const comma = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>       
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const colon = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const semicolon = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>  
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>  
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>  
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const apostrophe = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const doubleQuote = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const questionMark = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">        
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">        
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const bang = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+`;
+
+const at = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const octothorpe = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const dollarSign = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const percent = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+`;
+
+const ampersand = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+    <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+`;
+
+const leftParen = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+`;
+
+const rightParen = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const plusSign = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="dot"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+const equalSign = `
+<div class="letter">
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+    <div class="letter-row">
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <div class="blank"></div>
+    </div>
+</div>
+`;
+
+
 // OBJECT WITH KEY-VALUE PAIRS
-export const letters = {
+export const chars = {
     A: letterA,
     B: letterB,
     C: letterC,
@@ -1822,9 +3405,55 @@ export const letters = {
     W: letterW,
     X: letterX,
     Y: letterY,
-    Z: letterZ
+    Z: letterZ,
+    0: number0,
+    1: number1, 
+    2: number2,
+    3: number3,
+    4: number4,
+    5: number5,
+    6: number6,
+    7: number7,
+    8: number8,
+    9: number9,
+    dash: dash,
+    period: period,
+    comma: comma,
+    colon: colon,
+    semicolon: semicolon,
+    apostrophe: apostrophe,
+    doubleQuote: doubleQuote,
+    questionMark: questionMark,
+    bang: bang,
+    at: at,
+    octothorpe: octothorpe, // the most fun of all its names
+    dollarSign: dollarSign,
+    percent: percent,
+    ampersand: ampersand,
+    leftParen: leftParen,
+    rightParen: rightParen,
+    plusSign: plusSign,
+    equalSign: equalSign
 };
 
-// module.exports = {
-//     letters: letters
-// }
+export const specials = {
+    dash: "-",
+    period: ".",
+    comma: ",",
+    colon: ":",
+    semicolon: ";",
+    apostrophe: "'",
+    doubleQuote: "\"",
+    questionMark: "?",
+    bang: "!",
+    at: "@",
+    octothorpe: "#",
+    dollarSign: "$",
+    percent: "%",
+    ampersand: "&",
+    leftParen: "(",
+    rightParen: ")",
+    plusSign: "+",
+    equalSign: "="
+}
+
