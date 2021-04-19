@@ -8,7 +8,7 @@
 	<title>Dazzle</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Courier+Prime&display=swap" rel="stylesheet">
     <script type="module" src = "chars.js"></script>
 	<script type="module" src = "scripts.js"></script>
     
@@ -16,14 +16,44 @@
 
 <body>
 	<main> 
-        <h1>DAZZLE WORDS</h1>
+        <h1 id="title">DAZZLE WORDS</h1>
+
         <div id="input-area">
             <form id="form">
-                <input id="input" type="text" placeholder="Enter a short word or phrase" maxlength="32" />
+                <input id="input" type="text" placeholder="Enter a short word or phrase" maxlength="24" />
                 <button id="button" type="submit">BEDAZZLE</button>
             </form>    
         </div>
+
         <div id="word-area"></div> <!-- comes from JS -->
+
+        <div id="options-area">
+            <h3>OPTIONS</h3>
+            <div id="options-icons">
+                <div class="groupA icon-group">
+                    <div class="rotateA color-scheme-icon"></div>
+                    <div class="rotateA color-scheme-icon"></div>
+                    <div class="rotateA color-scheme-icon"></div>
+                    <div class="rotateA color-scheme-icon"></div>
+                </div>
+                <div class="groupB icon-group">
+                    <div class="rotateB color-scheme-icon"></div>
+                    <div class="rotateB color-scheme-icon"></div>
+                    <div class="rotateB color-scheme-icon"></div>
+                    <div class="rotateB color-scheme-icon"></div>
+                </div>
+                <div class="groupC icon-group">
+                    <div class="rotateC color-scheme-icon"></div>
+                    <div class="rotateC color-scheme-icon"></div>
+                    <div class="rotateC color-scheme-icon"></div>
+                    <div class="rotateC color-scheme-icon"></div>
+                </div>
+            </div>
+            <div id="mode-button-group">
+                <button id="dark-mode-button">DARK MODE</button>
+                <button id="light-mode-button">LIGHT MODE</button>
+            </div>
+        </div>
     </main>  
 </body>
 

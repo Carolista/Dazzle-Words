@@ -1,0 +1,465 @@
+// GENERAL
+$default-dark: #121212;
+$default-light: #efefef;
+$default-watermark: #aaa;
+$default-font: 'Courier Prime', monospace;
+$title-font: 'Fredoka One', sans-serif;
+
+// COLOR SCHEME A
+$A01: #6da129;
+$A02: #2ba17e;
+$A03: #2c6ba5;
+$A04: #2e2caf;
+$A05: #772ca3;
+$A06: #912ca5;
+$A07: #5b2ba8;
+$A08: #2c7da3;
+$A09: #2b9c80;
+$A10: #6ea02c;
+
+// COLOR SCHEME B
+$B01: #cb771e;
+$B02: #d3a719;
+$B03: #cb9218;
+$B04: #af552c;
+$B05: #bb3122;
+$B06: #bb2a6e;
+$B07: #ab1db8;
+$B08: #b81f6e;
+$B09: #ba341c;
+$B10: #bd4816;
+
+// COLOR SCHEME C
+$C01: #7fa411;
+$C02: #3a8e10;
+$C03: #2ba17e;
+$C04: #22a0c7;
+$C05: #0f85ce;
+$C06: #15bdc9;
+$C07: #0ebaa0;
+$C08: #1ac73d;
+$C09: #8ec918;
+$C10: #c5c51d;
+
+
+/**** Defaults for standard elements ****/
+
+html { 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+}
+
+body {
+    background-color: $default-dark;
+	font-family: $default-font;
+	font-size: 12pt;
+	font-weight: 400;
+	color: $default-light;
+	width: 100vw;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    width: 100vw;
+    height: auto;
+    padding: 50px 5vw;
+    box-sizing: border-box;
+    animation: fade-in 3s;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: $B05; 
+    font-size: 3.5rem;
+    font-family: $title-font;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0px;
+}
+
+h3 {
+    color: $default-light;
+    font-family: $title-font;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0px 0px 15px;
+}
+
+p {
+    text-align: center;
+    margin: .5rem 0px; 
+}
+
+
+/**** IDs for specific elements ****/
+
+/* used only in for-mom.html */
+#flower {
+    position: relative;
+    height: 150px;
+    margin: 0px 30px 0px 0px;
+}
+
+#input-area {
+    display: inline-block;
+    position: relative;
+    margin: 20px auto 40px;
+}
+
+#input {
+    font-family: inherit;
+    font-size: 1.05rem;
+    background-color: $default-light;
+    width: 280px;
+    height: 30px;
+    border-radius: 16px 0px;
+    border: 2px solid $B05;
+    padding: 5px 15px;
+}
+
+#input::placeholder {
+    font-family: $default-font;
+    color: $default-watermark;
+}
+
+#button {
+    color: $default-light;
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: $B01;
+    height: 42px;
+    border-radius: 16px 0px;
+    border: none;
+    padding: 6px 15px 3px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 540px) {
+    #button {
+        margin: 0px 20px;
+    }
+}
+
+#word-area {
+    flex-direction: row;
+    flex-wrap: wrap; /* let entire words wrap */
+}
+
+#options-area {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+}
+
+#options-icons {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#mode-button-group {
+    display: inline-block;
+    position: relative;
+    margin: 0px auto 40px;
+}
+
+#dark-mode-button, #light-mode-button {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    height: auto;
+    border-radius: 16px 0px;
+    border: none;
+    padding: 5px 12px 2px;
+    margin: 20px 10px;
+    cursor: pointer;
+}
+
+#dark-mode-button {
+    color: $default-dark;
+    background-color: $default-light;
+}
+
+#light-mode-button {
+    color: $default-light;
+    background-color: $default-dark;
+}
+
+/**** Classes for custom styles ****/
+
+.word {
+    flex-direction: row;
+    flex-wrap: nowrap; /* keep letters of a single word together */
+    height: auto;
+    margin: 2vw;
+}
+
+.letter {
+    height: auto;
+    width: auto;
+    margin: 0px .8vw;
+}
+
+.letter-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+ }
+
+.dot {
+    background-color: $default-dark;
+    animation: rotateB; /* assigned by JS */
+}
+
+.blank {
+    background-color: transparent;
+}
+
+.dot, .blank {
+    min-height: 5px;
+    height: 1vw;
+    max-height: 10px;
+    min-width: 5px;
+    width: 1vw;
+    max-width: 10px;
+    margin: 1px;
+    border: none;
+    border-radius: 50%; /* variability assigned by JS */
+}
+
+@media screen and (min-width: 900px) {
+    .dot, .blank {
+        margin: 2px;
+    }
+}
+
+.rotateA {
+    animation: rotateA 4s infinite;
+}
+
+.rotateB {
+    animation: rotateB 4s infinite;
+}
+
+.rotateC {
+    animation: rotateC 4s infinite;
+}
+
+.icon-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 38px;
+    width: 38px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.color-scheme-icon {
+    background-color: $default-dark;
+    height: 15px;
+    width: 15px;
+    border-radius: 50% 0px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+
+/* FADE IN */ 
+
+@keyframes fade-in {
+
+	0% {
+		opacity: 0.0;
+    }
+    
+    10% {
+        opacity: 0.1;
+    }
+    
+    20% {
+		opacity: 0.2;
+    }
+    
+    30% {
+		opacity: 0.3;
+    }
+    
+    40% {
+		opacity: 0.4;
+    }
+
+    50% {
+		opacity: 0.5;
+    }
+    
+    60% {
+		opacity: 0.6;
+    }
+    
+    70% {
+		opacity: 0.7;
+    }
+    
+    80% {
+		opacity: 0.8;
+    }
+    
+    90% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 1.0;
+	}
+}
+
+
+/* COLOR ROTATIONS */
+
+@keyframes rotateA {
+
+	0% {
+		background-color: $A01;
+    }
+    
+    10% {
+        background-color: $A02;
+    }
+    
+    20% {
+		background-color: $A03;
+    }
+    
+    30% {
+		background-color: $A04;
+    }
+    
+    50% {
+		background-color: $A05;
+    }
+    
+    60% {
+		background-color: $A06;
+    }
+    
+    70% {
+		background-color: $A07;
+    }
+    
+    80% {
+		background-color: $A08;
+    }
+    
+    90% {
+		background-color: $A09;
+	}
+
+	100% {
+		background-color: $A10;
+	}
+}
+
+@keyframes rotateB {
+
+	0% {
+		background-color: $B01;
+    }
+    
+    10% {
+        background-color: $B02;
+    }
+    
+    20% {
+		background-color: $B03;
+    }
+    
+    30% {
+		background-color: $B04;
+    }
+    
+    50% {
+		background-color: $B05;
+    }
+    
+    60% {
+		background-color: $B06;
+    }
+    
+    70% {
+		background-color: $B07;
+    }
+    
+    80% {
+		background-color: $B08;
+    }
+    
+    90% {
+		background-color: $B09;
+	}
+
+	100% {
+		background-color: $B10;
+	}
+}
+
+@keyframes rotateC {
+
+	0% {
+		background-color: $C01;
+    }
+    
+    10% {
+        background-color: $C02;
+    }
+    
+    20% {
+		background-color: $C03;
+    }
+    
+    30% {
+		background-color: $C04;
+    }
+    
+    50% {
+		background-color: $C05;
+    }
+    
+    60% {
+		background-color: $C06;
+    }
+    
+    70% {
+		background-color: $C07;
+    }
+    
+    80% {
+		background-color: $C08;
+    }
+    
+    90% {
+		background-color: $C09;
+	}
+
+	100% {
+		background-color: $C10;
+	}
+}
