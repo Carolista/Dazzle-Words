@@ -37,6 +37,8 @@ main {
   padding: 50px 5vw;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-animation: fade-in 3s;
+          animation: fade-in 3s;
 }
 
 div {
@@ -174,21 +176,6 @@ p {
       flex-wrap: nowrap;
 }
 
-#rotateA {
-  -webkit-animation: rotateA 4s infinite;
-          animation: rotateA 4s infinite;
-}
-
-#rotateB {
-  -webkit-animation: rotateB 4s infinite;
-          animation: rotateB 4s infinite;
-}
-
-#rotateC {
-  -webkit-animation: rotateC 4s infinite;
-          animation: rotateC 4s infinite;
-}
-
 /**** Classes for custom styles ****/
 .word {
   -webkit-box-orient: horizontal;
@@ -248,13 +235,112 @@ p {
   }
 }
 
+.rotateA {
+  -webkit-animation: rotateA 4s infinite;
+          animation: rotateA 4s infinite;
+}
+
+.rotateB {
+  -webkit-animation: rotateB 4s infinite;
+          animation: rotateB 4s infinite;
+}
+
+.rotateC {
+  -webkit-animation: rotateC 4s infinite;
+          animation: rotateC 4s infinite;
+}
+
+.icon-group {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 48px;
+  width: 48px;
+  margin: 10px;
+}
+
 .color-scheme-icon {
   background-color: #121212;
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   border-radius: 50% 0px;
-  margin: 0px 5px;
+  margin: 0px 2px;
   cursor: pointer;
+}
+
+/* FADE IN */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0.0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0.0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1.0;
+  }
 }
 
 /* COLOR ROTATIONS */

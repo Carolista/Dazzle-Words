@@ -60,19 +60,20 @@ window.addEventListener("load", function() {
 function init() {
 
     // Get some objects from page
-    const body = document.getElementsByTagName("body");
     const title = document.querySelector("#title");
     const form = document.querySelector("#form");
     const inputField = document.querySelector("#input");
     const button = document.querySelector("#button");
     const wordArea = document.querySelector("#word-area");
     const dots = document.getElementsByClassName("dot");
-    const icons = document.getElementsByClassName("icons");
+    const iconGroups = document.getElementsByClassName("icon-group");
+    const icons = document.getElementsByClassName("color-scheme-icon");
 
     // Variable color schemes
     const colorSchemes = [schemeA, schemeB, schemeC];
 
     // Initial values upon first loading
+    setIcons();
     let currentSchemeIndex = randomize(3);
     updateColors();
 
@@ -89,17 +90,29 @@ function init() {
         }  
     }
 
+    // Assign color schemes and variable rotation speeds to color selection icons
+    function setIcons() {
+        for (let i=0; i < iconGroups.length; i++) {
+            for (let j=0; j < 4; j++) {
+                icons[j+4*i].style.animation = `${colorSchemes[i].name} ${randomize(6, 2)}s infinite, fade-in 2s`;
+            }  
+        }
+    }
+
     // Change color scheme when one of the color scheme icons is clicked 
     document.addEventListener("click", function(event) {
-        console.log("icon clicked");
+        // If icon was clicked
         for (let i=0; i < colorSchemes.length; i++) {
-            if (event.target.id === colorSchemes[i].name) {
-                console.log("match!")
+            // If clicked within foursquare but outside icons
+            if (event.target.classList[1] === "icon-group" && event.target.classList[0][5] === colorSchemes[i].name[6]) {
                 currentSchemeIndex = i;
-                console.log("new index is " + currentSchemeIndex);
+                updateColors();
+            // If clicked directly on icon
+            } else if (event.target.classList[0] === colorSchemes[i].name) {
+                currentSchemeIndex = i;
                 updateColors();
             }
-        }
+        }    
     });
 
     // Find special character and get key name
@@ -189,7 +202,7 @@ function init() {
                 dots[i].style.borderRadius = "0 50%";
             }
             // Set animation
-            dots[i].style.animation = `${colorSchemes[currentSchemeIndex].name} ${randomize(11, 2)}s infinite`;
+            dots[i].style.animation = `${colorSchemes[currentSchemeIndex].name} ${randomize(11, 2)}s infinite, fade-in 2s`;
         }
     }
 
