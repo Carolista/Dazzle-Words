@@ -1,16 +1,13 @@
 /**** DAZZLE WORDS ****/
 
 /*
-    Words made of chars made of small shapes with rotating colors
+    Words built from characters made of small shapes with rotating colors
 */
 
-/*
-    TODO: Add the ability to switch color schemes
-    TODO: Add the ability to change page background color
-*/
 
 import { chars, specials } from './chars.js';
 // Note: this file and chars.js are both specified as modules in HTML head
+
 
 // COLOR SCHEMES - For setting title, button, etc.; need to keep consistent with SCSS variables
 const schemeA = {
@@ -53,6 +50,15 @@ const schemeC = {
     color10: "#c5c51d"
 }
 
+// Variable color schemes
+const colorSchemes = [schemeA, schemeB, schemeC];
+
+// For dark mode & light mode
+let darkColor = "#121212";
+let lightColor = "#efefef"
+
+
+// INITIAL LOADING & DYNAMIC STUFF
 window.addEventListener("load", function() {
     init();
 });
@@ -60,19 +66,22 @@ window.addEventListener("load", function() {
 function init() {
 
     // Get some objects from page
+    const body = document.querySelector("body");
     const title = document.querySelector("#title");
     const form = document.querySelector("#form");
     const inputField = document.querySelector("#input");
     const button = document.querySelector("#button");
     const wordArea = document.querySelector("#word-area");
     const dots = document.getElementsByClassName("dot");
+    const optionsH3 = document.querySelector("h3");
     const iconGroups = document.getElementsByClassName("icon-group");
     const icons = document.getElementsByClassName("color-scheme-icon");
-
-    // Variable color schemes
-    const colorSchemes = [schemeA, schemeB, schemeC];
+    const darkModeButton = document.querySelector("#dark-mode-button");
+    const lightModeButton = document.querySelector("#light-mode-button"); 
 
     // Initial values upon first loading
+    let currentMode = randomize(2) === 0 ? "dark" : "light"; // randomize default
+    setMode();
     setIcons();
     let currentSchemeIndex = randomize(3);
     updateColors();
@@ -85,7 +94,7 @@ function init() {
         // Update animation for each dot if currently displaying content
         if (wordArea.innerHTML !== "") {
             for (let i=0; i < dots.length; i++) {
-                dots[i].style.animation = `${colorSchemes[currentSchemeIndex].name} ${randomize(11, 2)}s infinite`;
+                dots[i].style.animation = `${colorSchemes[currentSchemeIndex].name} ${randomize(11, 2)}s infinite, fade-in 2s`;
             }
         }  
     }
@@ -99,20 +108,53 @@ function init() {
         }
     }
 
-    // Change color scheme when one of the color scheme icons is clicked 
+    // To set dark or light mode - use after currentMode has just been set/switched
+    function setMode() {
+        if (currentMode === "dark") {
+            body.style.backgroundColor = darkColor;
+            optionsH3.style.color = lightColor;
+        } else if (currentMode === "light") {
+            body.style.backgroundColor = lightColor;
+            optionsH3.style.color = darkColor;
+        }
+    }
+
+    // Color scheme or mode changes
     document.addEventListener("click", function(event) {
-        // If icon was clicked
+
+        // If selecting a different color scheme
         for (let i=0; i < colorSchemes.length; i++) {
-            // If clicked within foursquare but outside icons
-            if (event.target.classList[1] === "icon-group" && event.target.classList[0][5] === colorSchemes[i].name[6]) {
-                currentSchemeIndex = i;
-                updateColors();
+
             // If clicked directly on icon
-            } else if (event.target.classList[0] === colorSchemes[i].name) {
-                currentSchemeIndex = i;
-                updateColors();
+            for (let k=0; k < icons.length; k++) {
+                // let currentIcon = icons[k];
+                // let iconScheme = currentIcon.classList[0];
+                // let indexOfScheme = colorSchemes.match(iconScheme.name);
+                if (event.target === icons[k] && icons[k].classList[0] === colorSchemes[i].name) {
+                    console.log("I clicked the thing");
+                    currentSchemeIndex = i;
+                    updateColors();
+                }
             }
-        }    
+            // If clicked within foursquare but just outside icons
+            for (let j=0; j < iconGroups.length; j++) {
+                if (event.target === iconGroups[j] && iconGroups[j].classList[0][5] === colorSchemes[i].name[6]) {
+                    console.log("I clicked the other thing");
+                    currentSchemeIndex = i;
+                    updateColors();
+                }
+            } 
+        }   
+        
+        // If dark mode or light mode is clicked
+        if (event.target === lightModeButton) {
+            currentMode = "light";
+            setMode();
+        } else if (event.target === darkModeButton) {
+            currentMode = "dark";
+            setMode();
+        }
+
     });
 
     // Find special character and get key name
@@ -207,25 +249,6 @@ function init() {
     }
 
     /** Miscellaneous Helper Functions **/
-
-    function componentToHex(c) {
-        var hex = c.toString(16);
-        return hex.length == 1 ? "0" + hex : hex;
-    }
-    
-    function rgbToHex(rgb) {
-        // parse rgb as string of code to get individual numbers
-        let paren1 = rgb.indexOf("(");
-        let comma1 = rgb.indexOf(",");
-        let r = Number(rgb.slice(paren1+1,comma1));
-        rgb = rgb.slice(comma1+1);
-        let comma2 = rgb.indexOf(",");
-        let paren2 = rgb.indexOf(")");
-        let g = Number(rgb.slice(0,comma2));
-        let b = Number(rgb.slice(comma2+1,paren2));
-        // convert and concatenate to hex code string
-        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-    }
 
     function randomize(max = 100, min = 0, dec = 0) {
         let factor = 10 ** dec;

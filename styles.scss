@@ -95,8 +95,9 @@ h1 {
 }
 
 h3 {
+    color: $default-light;
     font-family: $title-font;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     text-align: center;
     margin: 0px 0px 15px;
@@ -120,7 +121,7 @@ p {
 #input-area {
     display: inline-block;
     position: relative;
-    margin: 20px auto 60px;
+    margin: 20px auto 40px;
 }
 
 #input {
@@ -167,7 +168,7 @@ p {
 #options-area {
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 60px 0px;
+    margin: 50px 0px;
 }
 
 #options-icons {
@@ -175,8 +176,33 @@ p {
     flex-wrap: nowrap;
 }
 
+#mode-button-group {
+    display: inline-block;
+    position: relative;
+    margin: 0px auto 40px;
+}
 
+#dark-mode-button, #light-mode-button {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    height: auto;
+    border-radius: 16px 0px;
+    border: none;
+    padding: 5px 12px 2px;
+    margin: 20px 10px;
+    cursor: pointer;
+}
 
+#dark-mode-button {
+    color: $default-dark;
+    background-color: $default-light;
+}
+
+#light-mode-button {
+    color: $default-light;
+    background-color: $default-dark;
+}
 
 /**** Classes for custom styles ****/
 
@@ -241,17 +267,18 @@ p {
 .icon-group {
     flex-direction: row;
     flex-wrap: wrap;
-    height: 48px;
-    width: 48px;
+    height: 38px;
+    width: 38px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .color-scheme-icon {
     background-color: $default-dark;
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     border-radius: 50% 0px;
-    margin: 0px 2px;
+    margin: 2px;
     cursor: pointer;
 }
 
