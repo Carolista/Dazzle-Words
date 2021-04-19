@@ -60,6 +60,7 @@ window.addEventListener("load", function() {
 function init() {
 
     // Get some objects from page
+    const body = document.getElementsByTagName("body");
     const title = document.querySelector("#title");
     const form = document.querySelector("#form");
     const inputField = document.querySelector("#input");
@@ -113,7 +114,7 @@ function init() {
         let wordArray = input.split(" ");
         // Loop through and check length of each word
         for (let i=0; i < wordArray.length; i++) {
-            if (wordArray[i].length > 8 ) {
+            if (wordArray[i].length > 9 ) {
                 return true;
             }
         }
@@ -149,8 +150,10 @@ function init() {
         } else if (! re.test(inputField.value)) {
             alert("\nOops! One or more of your characters can't be bedazzled. Try again!");
         } else { // Display input graphically and reset form
-            if (hasLongWord(inputField.value)) {
-                alert("\nFor best results, each word should be no longer than 7-8 characters. Thank you! \n- Your Friendly Local Quality Assurance Specialist");
+            let viewWidth = window.innerWidth || document.documentElement.clientWidth || 
+            document.body.clientWidth;
+            if (viewWidth < 1000 && hasLongWord(inputField.value)) {
+                alert("\nFor best results, each word should be no longer than 8-9 characters. Thank you! \n- Your Friendly Local Quality Assurance Specialist");
             }
             displayAllWords(inputField.value);
             clearForm();

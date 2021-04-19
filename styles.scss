@@ -44,6 +44,11 @@ $C10: #c5c51d;
 
 /**** Defaults for standard elements ****/
 
+html { 
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+}
+
 body {
     background-color: $default-dark;
 	font-family: $default-font;
@@ -54,7 +59,6 @@ body {
 	height: 100vh;
 	margin: 0px;
 	padding: 0px;
-    overflow: hidden; 
     box-sizing: border-box;
 }
 
@@ -91,7 +95,7 @@ h1 {
 
 h3 {
     font-family: $title-font;
-    font-size: 2rem;
+    font-size: 1.7rem;
     letter-spacing: 2px;
     text-align: center;
     margin: 0px;
@@ -119,6 +123,7 @@ p {
 }
 
 #input {
+    font-family: inherit;
     font-size: 1.05rem;
     background-color: $default-light;
     width: 280px;
@@ -158,6 +163,12 @@ p {
     flex-wrap: wrap; /* let entire words wrap */
 }
 
+#options-area {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 60px 0px;
+}
+
 
 /**** Classes for custom styles ****/
 
@@ -165,7 +176,7 @@ p {
     flex-direction: row;
     flex-wrap: nowrap; /* keep letters of a single word together */
     height: auto;
-    margin: 15px 15px;
+    margin: 2vw;
 }
 
 .letter {
@@ -192,10 +203,10 @@ p {
 .dot, .blank {
     min-height: 5px;
     height: 1vw;
-    max-height: 12px;
+    max-height: 10px;
     min-width: 5px;
     width: 1vw;
-    max-width: 12px;
+    max-width: 10px;
     margin: 1px;
     border: none;
     border-radius: 50%; /* variability assigned by JS */
