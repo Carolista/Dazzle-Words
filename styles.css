@@ -3,11 +3,11 @@
 /**** Defaults for standard elements ****/
 
 body {
-    background-color: #f3ebdf;
-	font-family: 'Comfortaa', sans-serif;
+    background-color: #121212;
+	font-family: 'Fredoka One', cursive;
 	font-size: 12pt;
 	font-weight: 400;
-	color: #4d8504; 
+	color: #772ca3; 
 	width: 100vw;
 	height: 100vh;
 	margin: 0px;
@@ -22,8 +22,8 @@ main {
     justify-content: center;
     align-items: top;
     width: 100vw;
-    height: 100vh;
-    padding: 50px 80px;
+    height: auto;
+    padding: 50px 5vw;
     box-sizing: border-box;
 }
 
@@ -40,7 +40,15 @@ div {
 
 h1 {
     font-size: 3.5rem;
-    color: #222;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0px;
+}
+
+h3 {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 2px;
     text-align: center;
     margin: 0px;
 }
@@ -53,10 +61,47 @@ p {
 
 /**** IDs for specific elements ****/
 
+/* used only in for-mom.html */
 #flower {
     position: relative;
     height: 150px;
     margin: 0px 30px 0px 0px;
+}
+
+#input-area {
+    display: inline-block;
+    position: relative;
+    margin: 30px auto 60px;
+}
+
+#input {
+    font-size: 0.95rem;
+    width: 200px;
+    height: 30px;
+    border-radius: 16px 0px;
+    border: 2px solid #772ca3;
+    padding: 5px 15px;
+}
+
+#input::placeholder {
+    color: #bbb;
+}
+
+#button {
+    color: white;
+    font-weight: bold;
+    background-color:#6ea02c;
+    height: 42px;
+    border-radius: 16px 0px;
+    border: none;
+    padding: 5px 15px;
+    margin: 20px 20px 0px;
+    cursor: pointer;
+}
+
+#word-area {
+    flex-direction: row;
+    flex-wrap: wrap; /* let entire words wrap */
 }
 
 
@@ -64,38 +109,48 @@ p {
 
 .word {
     flex-direction: row;
-    flex-wrap: nowrap;
-    height: 108px;
-    margin: 40px 0px;
+    flex-wrap: nowrap; /* keep letters of a single word together */
+    height: auto;
+    margin: 15px 15px;
 }
 
 .letter {
-    height: 108px;
-    margin: 0px 11px;
+    height: auto;
+    width: auto;
+    margin: 0px .8vw;
 }
 
 .letter-row {
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 108px;
-}
+    height: auto;
+ }
 
 .dot {
-    background-color: #222;
-    height: 10px;
-    width: 10px;
-    margin: 1px;
-    border: none;
-    border-radius: 50%; /* variability assigned by JS */
+    background-color: #121212;
     animation: rotate; /* assigned by JS */
 }
 
 .blank {
     background-color: transparent;
-    height: 10px;
-    width: 10px;
+}
+
+.dot, .blank {
+    min-height: 5px;
+    height: 1vw;
+    max-height: 12px;
+    min-width: 5px;
+    width: 1vw;
+    max-width: 12px;
     margin: 1px;
     border: none;
+    border-radius: 50%; /* variability assigned by JS */
+}
+
+@media screen and (min-width: 900px) {
+    .dot, .blank {
+        margin: 2px;
+    }
 }
 
 
